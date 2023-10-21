@@ -8,12 +8,16 @@ public class VacationService {
         for (int month = 0; month < 12; month++) {
             if (money > threshold) {
                 count++;
-                money = money - expenses - (expenses * 3);
+                money -= expenses + (expenses * 3);
             } else {
-                money = money + income - expenses;
+                money += income - expenses;
             }
         }
 
         return count;
     }
 }
+
+
+
+
